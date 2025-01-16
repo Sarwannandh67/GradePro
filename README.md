@@ -1,6 +1,7 @@
-# GradePro: The Ultimate Academic Calculator
+# GradePro: The Ultimate Academic Calculator for SRM
 
 **GradePro** is a web-based tool designed to make academic calculations simple and efficient. Whether you’re calculating your CGPA or figuring out the marks you need to achieve your desired grade, GradePro has you covered.
+Exclusive for SRM students
 
 ---
 
