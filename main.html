@@ -1,0 +1,91 @@
+
+<div class="nav-bar">
+  <button class="nav-btn" onclick="showCalculator('calculator1')">CGPA Calculator</button>
+  <button class="nav-btn" onclick="showCalculator('calculator2')">Required Marks Calculator</button>
+</div>
+
+<!-- CGPA Calculator -->
+<div id="calculator1" class="calculator-container">
+  <h1 class="title">CGPA Calculator</h1>
+  <div class="display">
+    <span class="cgpa-value">0</span>
+    <span class="cgpa-label">CGPA</span>
+  </div>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>S. No</th>
+        <th>Credits</th>
+        <th>Grade</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody id="cgpa-rows">
+      <tr>
+        <td>1.</td>
+        <td><input type="number" class="input-field" placeholder="0" min="0"></td>
+        <td>
+          <select class="input-field grade-select">
+            <option value="10">O</option>
+            <option value="9">A+</option>
+            <option value="8">A</option>
+            <option value="7">B+</option>
+            <option value="6">B</option>
+            <option value="5">C</option>
+            <option value="0">Fail</option>
+            <option value="0">Ab</option>
+          </select>
+        </td>
+        <td><button class="delete-btn" onclick="deleteRow(this, 'cgpa-rows')">Delete</button></td>
+      </tr>
+    </tbody>
+  </table>
+  <button class="add-course" onclick="addRow('cgpa-rows')">+ Add a Course</button>
+  <button class="calculate-btn" onclick="calculateCGPA()">Calculate CGPA</button>
+</div>
+
+<!-- Required Marks Calculator -->
+<div id="calculator2" class="calculator-container" style="display: none;">
+  <h1 class="title">Required Marks Calculator</h1>
+  <div class="display">
+    <span class="cgpa-value" id="overall-grade">-</span>
+    <span class="cgpa-label">Overall Grade</span>
+  </div>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>S. No</th>
+        <th>Internal Marks</th>
+        <th>Grade</th>
+        <th>Required Marks</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody id="required-marks-rows">
+      <tr>
+        <td>1.</td>
+        <td><input type="number" class="input-field" placeholder="0" min="0" max="60"></td>
+        <td>
+          <select class="input-field grade-select">
+            <option value="91">O</option>
+            <option value="81">A+</option>
+            <option value="71">A</option>
+            <option value="61">B+</option>
+            <option value="56">B</option>
+            <option value="50">C</option>
+            <option value="0">Fail</option>
+          </select>
+        </td>
+        <td class="required-marks">-</td>
+        <td><button class="delete-btn" onclick="deleteRow(this, 'required-marks-rows')">Delete</button></td>
+      </tr>
+    </tbody>
+  </table>
+  <button class="add-course" onclick="addRow('required-marks-rows')">+ Add a Course</button>
+  <button class="calculate-btn" onclick="calculateRequiredMarks()">Calculate</button>
+</div>
+
+<footer class="footer">
+  <p class="footer-text">THIS SITE IS TOTALLY MADE WITH AI</p>
+  <p class="footer-text">© Copyright SARWANNANDH</p>
+</footer>
